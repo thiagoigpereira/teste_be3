@@ -17,4 +17,8 @@ export class PatientsService {
   getAll(): Observable<any> {
     return this.http.get(`${environment.apiUrl}/Patients`);
   }
+
+  getById(id: string) {
+    return this.http.get<any>(`${environment.apiUrl}/Patients/${id}`)
+  }
 }
